@@ -6,11 +6,7 @@ import { BreedDetailsModule } from '@cats/modules/breed-details/breed-details.mo
 import { CatsContainerModule } from '@cats/modules/cats-container/cats-container.module';
 import { CatsStoreModule } from '@cats/store/cats.store.module';
 
-
-
 @NgModule({
-  declarations: [
-  ],
   imports: [
     CommonModule,
     CatsRoutingModule,
@@ -18,7 +14,7 @@ import { CatsStoreModule } from '@cats/store/cats.store.module';
     BreedDetailsModule,
     CatsContainerModule,
     CatsStoreModule
-  ],
+  ]
 
 })
 export class CatsModule { }

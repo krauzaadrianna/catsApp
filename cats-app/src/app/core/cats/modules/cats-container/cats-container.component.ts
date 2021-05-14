@@ -26,4 +26,6 @@ export class CatsContainerComponent implements OnInit {
     this.switchView = 'seeDetails';
   }
 
+
+
 }

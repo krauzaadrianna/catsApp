@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BreedDetailsComponent } from './breed-details.component';
-import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-
 
 
 @NgModule({
@@ -13,7 +11,6 @@ import { MatListModule } from '@angular/material/list';
   ],
   imports: [
     CommonModule,
-    MatTableModule,
     MatIconModule,
     MatListModule
   ],
