@@ -7,7 +7,7 @@ export const environment = {
 };
 
 export const api = {
-  url: 'https://api.thecatapi.com/v1/breeeds'
+  url: 'https://api.thecatapi.com/v1/breeds'
 };
 
 /*
