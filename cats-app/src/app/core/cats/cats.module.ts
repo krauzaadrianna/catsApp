@@ -1,9 +1,12 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CatsRoutingModule } from './cats.routing.module';
-import { BreedsListModule } from './modules/breeds-list/breeds-list.module';
-import { BreedDetailsModule } from './modules/breed-details/breed-details.module';
-import { CatsContainerModule } from './modules/cats-container/cats-container.module';
+import { CatsRoutingModule } from '@cats/cats.routing.module';
+import { BreedsListModule } from '@cats/modules/breeds-list/breeds-list.module';
+import { BreedDetailsModule } from '@cats/modules/breed-details/breed-details.module';
+import { CatsContainerModule } from '@cats/modules/cats-container/cats-container.module';
+import { CatsStoreModule } from '@cats/store/cats.store.module';
+
+
 
 @NgModule({
   declarations: [
@@ -13,7 +16,9 @@ import { CatsContainerModule } from './modules/cats-container/cats-container.mod
     CatsRoutingModule,
     BreedsListModule,
     BreedDetailsModule,
-    CatsContainerModule
-  ]
+    CatsContainerModule,
+    CatsStoreModule
+  ],
+
 })
 export class CatsModule { }

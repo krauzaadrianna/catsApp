@@ -1,1 +1,32 @@
-<p>breed-details works!</p>
+<mat-list>
+    <mat-list-item >
+        <mat-icon mat-list-icon>pets</mat-icon>
+        <div mat-line>Name</div>
+        <div mat-line>{{breedDetails.name}}</div>
+    </mat-list-item>
+    <mat-list-item >
+        <mat-icon mat-list-icon>place</mat-icon>
+        <div mat-line>Origin</div>
+        <div mat-line>{{breedDetails.origin}}</div>
+    </mat-list-item>
+        <mat-list-item>
+            <mat-icon mat-list-icon>favorite</mat-icon>
+            <div mat-line>Temperament</div>
+            <div mat-line>{{breedDetails.temperament}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon mat-list-icon>date_range</mat-icon>
+            <div mat-line>Life span</div>
+            <div mat-line>{{breedDetails.life_span}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon mat-list-icon>monitor_weight</mat-icon>
+            <div mat-line>Weight</div>
+            <div mat-line>{{breedDetails.weight.metric}}</div>
+        </mat-list-item>
+        <mat-list-item>
+            <mat-icon mat-list-icon>info</mat-icon>
+            <div mat-line>Wikipedia check</div>
+            <div mat-line><a [href]="breedDetails.wikipedia_url">Click</a></div>
+        </mat-list-item>
+</mat-list>

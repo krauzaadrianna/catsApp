@@ -1,0 +1,28 @@
+div {
+    text-align: center;
+}
+.message {
+    padding-top: 20%;
+    font-weight: 600;
+}
+
+.image {
+    width: 100vw;
+    height: 50vw;
+    margin: auto;
+    background-image: url('../../../assets/error.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; 
+    padding-top: 20%; 
+}
+
+@media only screen and (min-width: 1000px) {
+   .message{
+       padding-top: 10%;
+   }
+    .image{
+        width: 50%;
+        height: auto;
+    }
+}

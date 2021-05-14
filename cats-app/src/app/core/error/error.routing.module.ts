@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CatsContainerComponent } from '@cats/modules/cats-container/cats-container.component';
+import { ErrorComponent } from './error.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: CatsContainerComponent,
+    component: ErrorComponent,
   },
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CatsRoutingModule {}
+export class ErrorRoutingModule {}

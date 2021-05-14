@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { CatsBreeds } from '@cats/models/cats-breeds';
+import { CatsBreedsService } from '@cats/services/cats.service';
+import { BreedDetails } from '../../models/breed-details';
 
 @Component({
   selector: 'app-cats-container',
@@ -7,9 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatsContainerComponent implements OnInit {
 
-  constructor() { }
+  catsBreeds$: Observable<CatsBreeds> = this.catsBreedsService.selectCatsBreeds();
+  breedDetails$: Observable<BreedDetails>;
+  switchView = 'seeList';
+
+  constructor(private catsBreedsService: CatsBreedsService) { }
 
   ngOnInit(): void {
+    this.catsBreedsService.getCatsBreeds();
+  }
+
+  viewBreedDetails(breedDetails: BreedDetails): void{
+    this.breedDetails$ = of(breedDetails);
+    this.switchView = 'seeDetails';
   }
 
 }

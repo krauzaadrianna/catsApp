@@ -1,5 +1,24 @@
-<p>cats-container works!</p>
-<ng-container>
-<app-breeds-list></app-breeds-list>    
-</ng-container>
-
+<div class="container" [ngSwitch]="switchView">
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <button *ngSwitchCase="'seeDetails'" mat-icon-button class="example-icon" (click)="switchView = 'seeList'"
+                aria-label="Example icon-button with share icon">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            <button *ngSwitchCase="'seeList'" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>pets</mat-icon>
+            </button>
+            <span>Cats App</span>
+        </mat-toolbar-row>    
+    </mat-toolbar>
+    <ng-container *ngSwitchCase="'seeList'">
+        <mat-card *ngIf="catsBreeds$ | async as cats" >
+        <app-breeds-list [catsBreedsList]="cats" (viewBreedDetails)="viewBreedDetails($event)"></app-breeds-list>
+        </mat-card>
+    </ng-container>
+    <ng-container *ngSwitchCase="'seeDetails'">
+        <mat-card *ngIf="breedDetails$ | async as details" >
+        <app-breed-details [breedDetails]="details"></app-breed-details>
+        </mat-card>
+    </ng-container>
+</div>
